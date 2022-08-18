@@ -6,17 +6,15 @@ function NameFilter() {
   return (
     <div>
       <form className="name-input">
-        <label htmlFor="name-filter">
-          <input
-            className="text-box"
-            data-testid="name-filter"
-            type="text"
-            name="description"
-            id="name-filter"
-            value={ nameFilter }
-            onChange={ (event) => setNameFilter(event.target.value) }
-          />
-        </label>
+        <input
+          className="text-box"
+          data-testid="name-filter"
+          type="text"
+          name="description"
+          id="name-filter"
+          value={ nameFilter }
+          onChange={ (event) => setNameFilter(event.target.value) }
+        />
       </form>
     </div>
   );
