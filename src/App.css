@@ -1,41 +1,53 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  align-items: center;
+  background-color: black;
+  color: yellow;
+  display: flex;
+  flex-direction: column;
+  height: 900px;
+  justify-content: center;
+}
+
+header {
+  background-image: url('./star-wars.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 400px;
+}
+
+
+.table {
+  box-shadow: 0 0 20px rgb(241, 238, 4);
+  font-family: sans-serif;
+  font-size: 10px;
+  margin: 25px auto;
+  min-width: 400px;
+  padding: 12px 15px;
+}
+
+.table thead tr {
+  background-color: rgb(241, 238, 4);
+  color: black;
+  padding: 2px 1px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.table th, td {
+  padding: 2px 1px;
 }
 
-@media ( prefers-reduced-motion : no-preference ) {
-
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.table tbody tr {
+  border-bottom: 1px solid rgb(241, 238, 4);
+  text-align: center;
 }
 
-.App-header {
-  align-items: center;
-  background-color: #282c34;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  min-height: 100vh;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.table tbody tr:hover {
+  background-color: rgba(219, 243, 6, 0.144);
 }
