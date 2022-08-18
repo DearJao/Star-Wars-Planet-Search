@@ -22,6 +22,18 @@ header {
   width: 400px;
 }
 
+.name-input {
+  padding: 30px;
+}
+
+.text-box {
+  background-color: rgb(0, 2, 2);
+  border-color: rgb(241, 238, 4);
+  border-width: 3px;
+  color: rgb(241, 238, 4);
+  font-family: sans-serif;
+}
+
 
 .table {
   box-shadow: 0 0 20px rgb(241, 238, 4);

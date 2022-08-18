@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import PlanetsContext from '../context/PlanetsContext';
 
 function Table() {
-  const { planets } = useContext(PlanetsContext);
-  console.log(planets);
+  const { planets, filters: { nameFilter } } = useContext(PlanetsContext);
+
+  const planetsFilter = planets
+    .filter((planet) => planet.name.toLowerCase().includes(nameFilter.toLowerCase()));
 
   return (
     <div className="App">
@@ -26,7 +28,7 @@ function Table() {
           </tr>
         </thead>
         <tbody>
-          {planets.map((planet) => (
+          {planetsFilter.map((planet) => (
             <tr key={ planet.name }>
               <td>{planet.name}</td>
               <td>{planet.rotation_period}</td>

@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Filter from './components/Filter';
+import NameFilter from './components/NameFilter';
 import Header from './components/Header';
-import List from './components/Table';
+import Table from './components/Table';
 import PlanetsProvider from './context/PlanetsProvider';
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
     <main>
       <PlanetsProvider>
         <Header />
-        <Filter />
-        <List />
+        <NameFilter />
+        <Table />
       </PlanetsProvider>
     </main>
   );
