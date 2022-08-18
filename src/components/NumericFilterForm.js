@@ -14,9 +14,9 @@ function NumericFilterForm() {
   const { column, comparison, value } = NumericFilter;
   return (
     <div>
-      <form className="column-filter">
+      <form>
         <select
-          className="column-filter"
+          className="numeric-filter"
           data-testid="column-filter"
           name="column"
           id="column"
@@ -32,7 +32,7 @@ function NumericFilterForm() {
         </select>
 
         <select
-          className="comparison-filter"
+          className="numeric-filter"
           data-testid="comparison-filter"
           name="comparison"
           id="comparison"
@@ -46,7 +46,7 @@ function NumericFilterForm() {
         </select>
 
         <input
-          className="value-box"
+          className="numeric-filter"
           data-testid="value-filter"
           type="number"
           name="value"
@@ -57,6 +57,7 @@ function NumericFilterForm() {
         />
 
         <button
+          className="btn-filter"
           type="button"
           data-testid="button-filter"
           onClick={ () => setFilterByNumericValues([
