@@ -22,8 +22,8 @@ function Table() {
       }));
 
   return (
-    <div className="App">
-      <table className="table">
+    <div className="table">
+      <table>
         <thead>
           <tr>
             <th>Name</th>
