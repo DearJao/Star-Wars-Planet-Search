@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import PlanetsContext from '../context/PlanetsContext';
 
 function NumericFilterForm() {
@@ -10,6 +10,22 @@ function NumericFilterForm() {
     comparison: 'maior que',
     value: 0,
   });
+
+  const columnOptions = [
+    'population',
+    'orbital_period',
+    'diameter',
+    'rotation_period',
+    'surface_water',
+  ];
+
+  const unusedFilters = columnOptions.filter(
+    (column) => !filterByNumericValues.some((element) => column === element.column),
+  );
+
+  useEffect(() => {
+    setNumericFilter((prev) => ({ ...prev, column: unusedFilters[0] }));
+  }, [filterByNumericValues]);
 
   const { column, comparison, value } = NumericFilter;
   return (
@@ -24,11 +40,11 @@ function NumericFilterForm() {
           onChange={ ({ target }) => setNumericFilter({
             ...NumericFilter, column: target.value }) }
         >
-          <option value="rotation_period">rotation_period</option>
-          <option value="orbital_period">orbital_period</option>
-          <option value="diameter">diameter</option>
-          <option value="surface_water">surface_water</option>
-          <option value="population">population</option>
+          {unusedFilters.map((columnOption) => (
+            <option key={ columnOption } value={ columnOption }>
+              {columnOption}
+            </option>
+          ))}
         </select>
 
         <select

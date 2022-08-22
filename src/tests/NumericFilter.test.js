@@ -34,14 +34,10 @@ describe('verify all unitary/integration test in the Numeric filter form', () =>
     userEvent.type(valueFilter, '5000');
     userEvent.click(btn);
 
-    // expect(screen.getByText(/endor/i)).toBeInTheDocument();
-
     userEvent.selectOptions(colunmFilter, 'orbital_period');
     userEvent.selectOptions(comparisonFilter, 'igual a');
     userEvent.type(valueFilter, '312');
     userEvent.click(btn);
-
-    // expect(screen.getByText(/naboo/i)).toBeInTheDocument();
   });
 });
 
